@@ -1,0 +1,771 @@
+{
+  "extra": {
+    "init_session": "[{0}] Puthiya session aarambhikkunnu",
+    "load_session": "[{0}] Session status parisodhikkunnu",
+    "invalid_session": "[{0}] {1} THEETAYA SESSION ID ANN ITTEKANA, VEENDUM SCAN CHEYUKA!!!",
+    "success_session": "[{0}] Session successfully validated.",
+    "connecting": "[{0}] Connecting...",
+    "connected": "[{0}] Connected {1}",
+    "instance_close": "[{0}] Connection closed",
+    "instance_restart": "[{0}] Instance veendum thudangunnu...",
+    "reconnect": "[{0}] veendum connect cheyyunnu...({1})",
+    "reconnect_after": "[{0}] 1 minutes kazhinju veendum connect cheyum",
+    "another_login": "[{0}] session vere deviceil login cheythirikkukyyan.",
+    "error_message": "```---ERROR REPORT---\n\nVersion : {0}\nMessage : {1}\nError   : {2}\nJid     : {3}\ncommand : {4}\nPlatform : {5}```\n\n```-----``` *Made by LyFE with ❣* ```-----```",
+    "deleted_message": "           deletedMessage",
+    "install_external_plugin": "[{0}] External plugins install cheyyunnu...",
+    "installed_external_plugin": "[{0}] External Plugins install cheythu",
+    "plugin_install": "[{0}] Plugins install cheyyunnu...",
+    "plugin_installed": "[{0}] {1} install cheythu",
+    "plugins_installed": "[{0}] Plugins install cheythu",
+    "plugin_install_error": "[{0}] {1} install cheyyan pattiyilla, plugin delete cheyyunnu",
+    "plugin_not_found": "[{0}] plugin {1} kandupidikkunilla (404), plugin delete cheyyunnu",
+    "group_cmd": "Ith group chatsil mathram upayogikkan paddollu."
+  },
+  "plugins": {
+    "common": {
+      "reply_to_message": "Oru message-inu reply ittu",
+      "not_admin": "Njan admin alla.",
+      "reply_to_image": "Oru image-inu reply ittu",
+      "update": "_Settings successfully update cheythu! Ningalude preferences-il save cheythathu ippol active aayi._"
+    },
+    "menu": {
+      "help": "```╭────────────────╮\n      ʟᴇᴠᴀɴᴛᴇʀ\n╰────────────────╯\n\n╭────────────────\n│ Prefix : {0}\n│ User : {1}\n│ Time : {2}\n│ Day : {3}\n│ Date : {4}\n│ Version : {5}\n│ Plugins : {6}\n│ Ram : {7}\n│ Uptime : {8}\n│ Platform : {9}\n╰────────────────```",
+      "menu": "```╭═══ LEVANTER ═══⊷\n┃❃╭──────────────\n┃❃│ Prefix : {0}\n┃❃│ User : {1}\n┃❃│ Time : {2}\n┃❃│ Day : {3}\n┃❃│ Date : {4}\n┃❃│ Version : {5}\n┃❃│ Plugins : {6}\n┃❃│ Ram : {7}\n┃❃│ Uptime : {8}\n┃❃│ Platform : {9}\n┃❃╰───────────────\n╰═════════════════⊷```"
+    },
+    "afk": {
+      "example": "> *AFK Upayogam:*\n- AFK set cheyyan: *afk [reason]*\n- Udaharanam: *afk Njan busy aanu* Last seen #lastseen munpu\n- Oru message ayakkunnathil AFK status automatically remove avum\n- AFK off cheyyan: *afk off*",
+      "not_afk": "Ningal ippol AFK alla.",
+      "desc": "AFK (Away From Keyboard) status set cheyan"
+    },
+    "alive": {
+      "default": "Njan alive aanu\nUptime : #uptime",
+      "desc": "Bot-inte alive status message display cheyan. Optional custom text add cheyyam."
+    },
+    "antifake": {
+      "example": "*Antifake Status:* {0}\n\n> *Command Upayogam:*\n- *antifake list* - Ippolulla mode and codes kanan\n- *antifake allow 1,91* - Whitelist Mode: codes allow cheyyan, bakki ellam block cheyyan\n- *antifake disallow 92,93* - Blacklist Mode: codes block cheyyan, bakki ellam allow cheyyan\n- *antifake remove 91* - List-il ninnu code remove cheyyan\n- *antifake clear* - Ellaa codes clear cheythu disable cheyyan\n- *antifake on | off* - Enable/Disable cheyyan\n\n> *Note:* Whitelist and blacklist modes onnakkan pattilla. Mode maattan vendi `clear` upayogikkuka.",
+      "desc": "Anti-fake number enable cheyan (whitelist or blacklist mode)",
+      "not": "Country codes configure cheythittilla.",
+      "status": "Antifake ippol *{0}* aayi.",
+      "update": "> Antifake Update cheythu\n*Allowed:* {0}\n*Not Allowed:* {1}",
+      "allow_prompt": "*Allow cheyyan vendi country codes thanne ittu (whitelist mode)*\n_Udaharanam: antifake allow 1,91_",
+      "disallow_prompt": "*Disallow cheyyan vendi country codes thanne ittu (blacklist mode)*\n_Udaharanam: antifake disallow 92,93_",
+      "remove_prompt": "*Remove cheyyan vendi country codes thanne ittu*\n_Udaharanam: antifake remove 91_",
+      "mode_conflict_whitelist": "*⚠️ Modes onnakkan pattilla!*\n\n_Ningal ippol Blacklist Mode-il aanu. Whitelist Mode-il maattan vendi `antifake clear` first upayogikkuka._",
+      "mode_conflict_blacklist": "*⚠️ Modes onnakkan pattilla!*\n\n_Ningal ippol Whitelist Mode-il aanu. Blacklist Mode-il maattan vendi `antifake clear` first upayogikkuka._",
+      "whitelist_success": "*✅ Allowed country codes (Whitelist Mode):*\n{0}\n\n_Ive codes allow cheyyum, bakki ellam block cheyyum._",
+      "blacklist_success": "*🚫 Disallowed country codes (Blacklist Mode):*\n{0}\n\n_Ive codes block cheyyum, bakki ellam allow cheyyum._",
+      "removed": "*Removed country codes:*\n{0}",
+      "cleared": "*🗑️ Antifake list clear cheythu disable cheythu*",
+      "whitelist_mode": "🟢 Whitelist Mode (Allow Mathram)",
+      "blacklist_mode": "🔴 Blacklist Mode (Block Mathram)",
+      "enabled": "Enable cheythu",
+      "disabled": "Disable cheythu"
+    },
+    "antilink": {
+      "desc": "Anti-link enable cheyan or configure cheyan",
+      "disable": "_Antilink already disable aanu._",
+      "antilink_notset": "Antilink ellaa links-ineyum block cheyyan configure cheyyuka (URL list set cheythittilla). Specific URLs configure cheyyan vendi 'antilink allow' or 'antilink disallow' upayogikkuka.",
+      "status": "Antilink ippol *{0}* aayi.",
+      "info": "> Antilink Status: {0}\n*Allowed URLs:* {1}\n *Action :* {2}",
+      "action_invalid": "*Action thettaanu.*",
+      "action_update": "Antilink action update cheythu: *{0}*",
+      "update": "> Antilink Update cheythu\n*Allowed:* {0}\n*Not Allowed:* {1}",
+      "example": "Antilink Status: *{0}*\n\n> Upayogam Udaharanam:\n- antilink list - Ippolulla settings kanan\n- antilink allow whatsapp.com - Specific URLs allow cheyyan\n- antilink disallow facebook.com - Specific URLs disallow cheyyan\n- antilink clear allow - Allowed URLs clear cheyyan\n- antilink clear disallow - Disallowed URLs clear cheyyan\n- antilink on | off - Antilink enable/disable cheyyan\n- antilink kick | warn | null - Link-inu action set cheyyan"
+    },
+    "antiword": {
+      "desc": "Group chat-il specific words filter cheyan",
+      "example": "AntiWord Status: {0}\n> *Upayogam Udaharanam:*\n- antiword kick | warn | null - Violations-inu action set cheyyan\n- antiword on | off - Word filtering enable/disable cheyyan\n- antiword add word1,word2 - Block list-il words add cheyyan\n- antiword remove word1,word2 - Block list-il ninnu words remove cheyyan\n- antiword list - Blocked words kanan",
+      "action_update": "AntiWord action update cheythu: *{0}*",
+      "status": "AntiWord ippol *{0}* aayi.",
+      "add_prompt": "*Add cheyyan vendi words thanne ittu.*",
+      "added": "*Words add cheythu:*\n{0}",
+      "remove_prompt": "*Remove cheyyan vendi words thanne ittu.*",
+      "removed": "*Words remove cheythu:*\n{0}",
+      "no_words": "*Words set cheythittilla.*",
+      "info": "*AntiWord Status:* {0}\n*Action:* {1}\n\n*Words:* {2}",
+      "cleared": "*AntiWord list clear cheythu.*"
+    },
+    "apk": {
+      "desc": "APKMirror-il ninnu APK download cheyan",
+      "example": "> *Upayogam Udaharanam:*\n- apk Mixplorer\n- apk whatsapp,apkm (bundle APKs-um koode)",
+      "no_result": "_Ningalude query-kku vendi onnum kittiyilla._",
+      "apps_list": "Match cheyyunna Apps ({0})"
+    },
+    "delete": {
+      "desc": "Anti-delete: Deleted messages recover cheyan",
+      "example": "> *Upayogam Udaharanam:*\n- delete p - Deleted messages ningalude chat/sudo-lekku ayakan\n- delete g - Deleted messages same group-il ayakan\n- delete off - Anti-delete off cheyyan\n- delete <jid> - Deleted messages specific JID-lekku ayakan",
+      "invalid_jid": "*Error:* _JID thettaanu_",
+      "dlt_msg_jid": " _Deleted messages {0}-lekku ayakkum_",
+      "dlt_msg_disable": "Anti-delete off aayi.",
+      "dlt_msg_sudo": "_Deleted messages ningalude chat or sudo-lekku ayakkum._",
+      "dlt_msg_chat": "_Deleted messages chat-le thanne ayakkum._"
+    },
+    "dlt": {
+      "desc": "reply itta messages delete cheyan"
+    },
+    "fb": {
+      "desc": "Facebook video download cheyan",
+      "example": "",
+      "quality": "Video quality select cheyan",
+      "invalid": "*Error:* _URL-nu vendi video kandupidikkunilla._"
+    },
+    "fancy": {
+      "desc": "Fancy text undakkuka",
+      "example": "> *Upayogam:*\nfancy <text>\nfancy <font_number> (message-inu reply ittu)\n\n*Udaharanam:*\n- fancy Hello\n- fancy 7 (message-inu reply ittu)",
+      "invalid": "*Font Number thettaanu!*\n1-47 vare number thanne ittu."
+    },
+    "stop": {
+      "desc": "Chat-il filters delete cheyan",
+      "example": "> *Upayogam:*\n- stop <filter>\n- stop hi",
+      "delete": "{0} delete cheythu",
+      "not_found": "_{0} filters-il kandupidikkunilla._"
+    },
+    "filter": {
+      "desc": "Group-il filters manage cheyan",
+      "example": "> *Udaharanam:*\n- filter hi (text message-inu reply ittu)\n- filter list (Current filters kanikkum)",
+      "list": "> *Current Filters:*\n{0}",
+      "filter_add": "*{0}* filter add cheythu"
+    },
+    "forward": {
+      "desc": "Reply itta message specific JID(s)-lekku forward cheyan",
+      "foward": "Message {0}-lekku forward cheythu",
+      "example": "JID thettaanu!\n> *Upayogam:*\n- forward <jid>\n- forward 1234567890@s.whatsapp.net"
+    },
+    "save": {
+      "desc": "Reply itta message thanne-lekku forward cheyan",
+      "save": "Message save cheythu!"
+    },
+    "gemini": {
+      "desc": "Google Gemini AI - Chodikkam!",
+      "example": "> *Udaharanam :*\n- gemini hi\n- gemini picture-il enthanu (image-inu reply ittu)",
+      "Key": "> Gemini API Key illa!\nIvide ninnu edukkanam: https://aistudio.google.com/app/apikey\n\n*Set cheyyan:*\nsetvar GEMINI_API_KEY = ningalude api key"
+    },
+    "gstop": {
+      "desc": "Ellaa groups-ilum gfilters delete cheyan",
+      "example": "> *Upayogam:*\n- gstop <filter>\n- gstop hi",
+      "delete": "{0} delete cheythu",
+      "not_found": "_{0} gfilters-il kandupidikkunilla._"
+    },
+    "pstop": {
+      "desc": "Ellaa groups-ilum pfilter delete cheyan",
+      "example": "> *Upayogam:*\n- pstop <filter>\n- pstop hi",
+      "delete": "{0} delete cheythu",
+      "not_found": "_{0} pfilter-il kandupidikkunilla._"
+    },
+    "gfilter": {
+      "desc": "Groups-il global filters manage cheyan",
+      "example": "> *Udaharanam :*\n- gfilter hi (text message-inu reply ittu)\n- gfilter list (Current gfilters kanikkum)",
+      "add": "*{0}* gfilter add cheythu"
+    },
+    "pfilter": {
+      "desc": "Personal chats-il global filters manage cheyan",
+      "example": "> *Udaharanam :*\n- pfilter hi (text message-inu reply ittu)\n- pfilter list (Current pfilters kanikkum)",
+      "add": "*{0}* pfilter add cheythu"
+    },
+    "gpp": {
+      "desc": "group icon maattuka",
+      "update": "_Group icon update cheythu_"
+    },
+    "greet": {
+      "setdesc": "Personalized greeting message set cheyan",
+      "setexample": "> *Udaharanam:* setgreet Hi, ithu oru bot aanu. Enikku reply cheyyan time edukkum.",
+      "setupdate": "_Greeting message update cheythu._",
+      "getdesc": "Personalized greeting message edukkanam",
+      "notsetgreet": "> Greeting message set cheythittilla.",
+      "deldesc": "Personalized greeting message delete cheyan",
+      "delupdate": "Greeting message delete cheythu."
+    },
+    "greetings": {
+      "welcome_desc": "Puthiya members-inu welcome message ayakkuka",
+      "welcome_example": "Welcome ippol *{0}*\n\n> *Upayogam Udaharanam:*\n- welcome Hi &mention! Welcome to &name - Welcome message set cheyyan\n- welcome on | off - Enable/Disable cheyyan\n- welcome delete - Message delete cheyyan\n\n> *Placeholders:*\n- &mention - Puthiya member mention cheyyan\n- &name - Group name\n- &desc - Group description\n- &size - Member count\n- &pp - Member's profile picture\n\n> *Media:* Image/video-inu reply ittu OR message-il URL add cheyyan\n\nDetails-inu: https://levanter-delta.vercel.app/",
+      "welcome_enable": "_Welcome ippol enable cheythu_",
+      "welcome_disable": "_Welcome ippol disable cheythu_",
+      "welcome_delete": "_Welcome message delete cheythu_",
+      "welcome_not_set": "_First welcome message set cheyyan!_\n\n> *Udaharanam:*\nwelcome Hi &mention! Welcome to &name\n\nPinne upayogikkuka: welcome on",
+      "goodbye_desc": "Members-inu goodbye message ayakkuka",
+      "goodbye_example": "Goodbye ippol *{0}*\n\n> *Upayogam Udaharanam:*\n- goodbye Bye &mention! See you later - Goodbye message set cheyyan\n- goodbye on | off - Enable/Disable cheyyan\n- goodbye delete - Message delete cheyyan\n\n> *Placeholders:*\n- &mention - Leaving member mention cheyyan\n- &name - Group name\n- &desc - Group description\n- &size - Member count\n- &pp - Member's profile picture\n\n> *Media:* Image/video-inu reply ittu OR message-il URL add cheyyan\n\nDetails-inu: https://levanter-delta.vercel.app/",
+      "goodbye_enable": "_Goodbye ippol enable cheythu_",
+      "goodbye_disable": "_Goodbye ippol disable cheythu_",
+      "goodbye_delete": "_Goodbye message delete cheythu_",
+      "goodbye_not_set": "_First goodbye message set cheyyan!_\n\n> *Udaharanam:*\ngoodbye Bye &mention! Thanks for being with us\n\nPinne upayogikkuka: goodbye on"
+    },
+    "groq": {
+      "example": "*Udaharanam:* groq Hi\n\nOptional aayi ive environment variables set cheyyam:\n- GROQ_API_KEY\n- GROQ_MODEL\n- GROQ_SYSTEM_MSG\n\nDetails-inu: https://console.groq.com/keys",
+      "desc": "GROQ AI-odu interact cheyan"
+    },
+    "kick": {
+      "desc": "Group-il ninnu members remove cheyan.",
+      "not_admin": "Njan admin alla, athukond members remove cheyyan pattilla.",
+      "mention_user": "Oru user mention cheyan or message-inu reply ittu.",
+      "admin": "Specific cheytha user admin aanu, remove cheyyan pattilla.",
+      "kicking_all": "Ellaa non-admin members-ineyum remove cheyyunnu... ({0} members). Bot restart cheythal nirtham."
+    },
+    "add": {
+      "desc": "groups-il members add cheyan",
+      "warning": "> Contacts-il illatha numbers add cheyyaruthu; ith ban risk kooduthalakkum.",
+      "not_admin": "Njan admin alla, athukond members add cheyyan pattilla.",
+      "invalid_number": "Valid phone number thanne ittu. Udaharanam: add 91987654321",
+      "failed": "Add cheyyan pattiyilla. Invite ayachirikkunnu."
+    },
+    "promote": {
+      "desc": "Admin role kodukkuka",
+      "not_admin": "Njan admin alla, athukond roles maattan pattilla.",
+      "mention_user": "Oru user mention cheyan or message-inu reply ittu.",
+      "already_admin": "User already admin aanu."
+    },
+    "demote": {
+      "desc": "Admin role maattuka",
+      "not_admin": "Njan admin alla, athukond roles maattan pattilla.",
+      "mention_user": "Oru user mention cheyan or message-inu reply ittu.",
+      "not_admin_user": "User admin alla."
+    },
+    "invite": {
+      "desc": "Group invite link edukkanam",
+      "not_admin": "Njan admin alla, athukond invite link generate cheyyan pattilla.",
+      "success": "Group invite link:\n{0}"
+    },
+    "mute": {
+      "desc": "Groups admins mathram aakkuka",
+      "not_admin": "Njan admin alla, athukond group settings maattan pattilla.",
+      "mute": "{0} nimisham mute cheythu."
+    },
+    "unmute": {
+      "desc": "Group-il ellavarkkum message ayakkam",
+      "not_admin": "Njan admin alla, athukond group settings maattan pattilla."
+    },
+    "join": {
+      "desc": "Invite link use cheythu groups-il join cheyan",
+      "invalid_link": "Valid WhatsApp group invite link thanne ittu.",
+      "group_full": "Group full aanu, puthiya members edukkan pattilla.",
+      "success": "Group-il vijayavumayi join cheythu.",
+      "request_sent": "Join request ayachirikkunnu."
+    },
+    "revoke": {
+      "desc": "Group invite link revoke cheyan",
+      "not_admin": "Njan admin alla, athukond invite link revoke cheyyan pattilla."
+    },
+    "group_info": {
+      "desc": "Group invite link info kanikkuka",
+      "invalid_link": "Valid WhatsApp invite link thanne ittu.",
+      "details": "*Name:* {0}\n*Group ID:* {1}@g.us\n*Owner:* {2}\n*Members:* {3}\n*Created on:* {4}\n*Description:* {5}"
+    },
+    "common_members": {
+      "desc": "Randu groups-il common members kanikkuka or remove cheyyan",
+      "found": "0 common members kandupidichu."
+    },
+    "insta": {
+      "usage": "Udaharanam: insta <Instagram URL>",
+      "not_found": "Kandupidikkunilla.",
+      "desc": "Instagram posts, reels, videos download cheyan."
+    },
+    "ison": {
+      "usage": "Udaharanam: ison <phone number>",
+      "not_exist": "`*Whatsapp-il illa* ({0})\n`",
+      "exist": "\n*Whatsapp-il undu* ({0})\n",
+      "privacy": "*Privacy Settings on* ({0})\n",
+      "desc": "Phone number WhatsApp-il register cheythittundo ennu check cheyan."
+    },
+    "lydia": {
+      "usage": "Upayogam: lydia on | off\nReply or mention cheythu specific user-inu activate cheyan.",
+      "activated": "Lydia activate cheythu.",
+      "deactivated": "Lydia deactivate cheythu.",
+      "note": "Ith reply message-il mathram work cheyyum.",
+      "desc": "Chatbot feature enable/disable cheyan."
+    },
+    "rotate": {
+      "usage": "Udaharanam: rotate right|left|flip (video-inu reply ittu).",
+      "not_found": "Video-inu reply ittu valid rotation direction (right, left, flip) thanne ittu.",
+      "desc": "Video right, left or flip cheyan.",
+      "convert": "_Convert cheyyunnu..._"
+    },
+    "mp3": {
+      "usage": "Video or audio-inu reply ittu MP3 aakkuka.",
+      "not_found": "Video or audio message-inu reply ittu.",
+      "desc": "Video-yude audio or audio clip voice note aakkuka."
+    },
+    "photo": {
+      "usage": "Photo sticker-inu reply ittu image aakkuka.",
+      "desc": "Sticker image aakkuka."
+    },
+    "reverse": {
+      "usage": "Video or audio-inu reply ittu reverse cheyan.",
+      "not_found": "Video or audio message-inu reply ittu.",
+      "desc": "Video or audio clip reverse cheyan."
+    },
+    "cut": {
+      "usage": "Udaharanam: cut 0;30 (start;duration) (video or audio-inu reply ittu).",
+      "not_found": "Video or audio-inu reply ittu valid start and duration values (e.g., 10;30) thanne ittu.",
+      "desc": "Audio or video file-il ninnu segment cut cheyan."
+    },
+    "trim": {
+      "usage": "Udaharanam: trim 10;30 (video-inu reply ittu).",
+      "not_found": "Video-inu reply ittu valid start and duration values (e.g., 60;30) thanne ittu.",
+      "desc": "Video specified start and duration times-il trim cheyan."
+    },
+    "page": {
+      "usage": "Udaharanam: page 1 (image-inu reply ittu).",
+      "not_found": "Image-inu reply ittu page number indicate cheyyunna numeric caption thanne ittu.",
+      "desc": "Image PDF document-il page aayi add cheyan.",
+      "add": "Page {0} add cheythu!"
+    },
+    "pdf": {
+      "usage": "Udaharanam: pdf note (PDF-inu title ittu).",
+      "not_found": "PDF document-inu title thanne ittu.",
+      "desc": "Images PDF document aakkuka."
+    },
+    "merge": {
+      "usage": "Udaharanam: merge 1 (video-inu reply ittu order number ittu).",
+      "not_found": "Video-inu reply ittu valid order number thanne ittu.",
+      "desc": "Multiple videos onnakkuka.",
+      "merge": "_{0} videos onnakkunnu_",
+      "add": "_Video {0} add cheythu_"
+    },
+    "compress": {
+      "usage": "Video-inu reply ittu compress cheyan.",
+      "desc": "Video file size kurakkuka."
+    },
+    "bass": {
+      "usage": "Udaharanam: bass 10 (audio or video-inu reply ittu).",
+      "desc": "Audio file-inte bass levels maattuka."
+    },
+    "treble": {
+      "usage": "Udaharanam: treble 10 (audio or video-inu reply ittu).",
+      "desc": "Audio file-inte treble levels maattuka."
+    },
+    "histo": {
+      "usage": "Audio or video-inu reply ittu histogram video generate cheyan.",
+      "desc": "Audio visual video histogram aakkuka."
+    },
+    "vector": {
+      "usage": "Audio or video-inu reply ittu vector visualization video undakkuka.",
+      "desc": "Audio vector visualization video aakkuka."
+    },
+    "crop": {
+      "usage": "Udaharanam: crop 512,512,0,512 (video-inu reply ittu).",
+      "not_found": "Video-inu reply ittu valid crop dimensions format-il ittu: out_w,out_h,x,y.",
+      "desc": "Video specified dimensions-il crop cheyan.",
+      "xcrop": "Video width: *{0}*, height: *{1}*\nOutput size ittittanu."
+    },
+    "low": {
+      "usage": "Audio or video-inu reply ittu pitch lower cheyan.",
+      "desc": "Audio pitch lower tone aakkuka."
+    },
+    "pitch": {
+      "usage": "Audio or video-inu reply ittu pitch adjust cheyan.",
+      "not_found": "Audio or video message-inu reply ittu.",
+      "desc": "Audio file-inte pitch adjust cheyan."
+    },
+    "avec": {
+      "usage": "Audio or video-inu reply ittu video format aakkuka.",
+      "not_found": "Audio or video message-inu reply ittu.",
+      "desc": "Audio clip video aakkuka."
+    },
+    "avm": {
+      "usage": "Audio and video randum reply ittu onnakkuka.",
+      "desc": "Audio and video files onnakkuka.",
+      "audio_add": "_Audio add cheythu!_",
+      "video_add": "_Video add cheythu!_"
+    },
+    "black": {
+      "usage": "Audio or video-inu reply ittu black background-ulla video generate cheyan.",
+      "desc": "Audio clip black background-ulla video aakkuka."
+    },
+    "mediafire": {
+      "usage": "Udaharanam: mediafire <Mediafire URL>",
+      "not_found": "File kandupidikkunilla. URL check cheyan.",
+      "desc": "Mediafire-il ninnu file download cheyan."
+    },
+    "mention": {
+      "usage": "Udaharanam: mention on | off | get\n(Message-inu reply ittu specific user target cheyan.)",
+      "desc": "Automated replies-inu mention feature configure cheyan.",
+      "not_activated": "Reply to mention activate cheythittilla.",
+      "current_status": "Mention {0}. Details-inu: https://levanter-delta.vercel.app/",
+      "activated": "Reply-to mention activate cheythu.",
+      "deactivated": "Reply-to mention deactivate cheythu.",
+      "updated": "Mention settings update cheythu."
+    },
+    "status": {
+      "usage": "Upayogam: status on | off | no-dl | except-view <jid,...> | only-view <jid,...>",
+      "desc": "WhatsApp statuses auto manage cheyan."
+    },
+    "call": {
+      "usage": "Upayogam: call on | off",
+      "desc": "Incoming calls auto reject cheyan."
+    },
+    "read": {
+      "usage": "Upayogam: read on | off",
+      "desc": "Incoming messages auto read enable/disable cheyan."
+    },
+    "online": {
+      "usage": "Upayogam: online on | off",
+      "desc": "Account status always online aakkuka."
+    },
+    "movie": {
+      "usage": "Udaharanam: movie <movie title>",
+      "not_found": "Movie kandupidikkunilla. Title check cheyan.",
+      "desc": "OMDB API-il ninnu movie details, full plot edukkanam."
+    },
+    "msgs": {
+      "desc": "Group-inte message count each member-inum kanikkuka, individual totals and last seen duration koode.",
+      "msg_init": "\n*Number :* {0}\n*Name :* {1}\n*Total Msgs :* {2}\n",
+      "msg_last": "*lastSeen :* {0} munpu\n"
+    },
+    "reset": {
+      "usage": "Udaharanam: reset all OR reset <reply/mention>",
+      "desc": "Group-le ellarkkum or specific member-inum message count reset cheyan.",
+      "reset_all": "Ellarkkum message counts delete cheythu",
+      "reset_one": "_@{0} message counts delete cheythu._"
+    },
+    "inactive": {
+      "usage": "> Udaharanam:\n-inactive day 10\n- inactive day 10 kick\n- inactive total 100\n- inactive total 100 kick\n- inactive day 7 total 150\n- inactive day 7 total 150 kick\n\n'kick' paranjillenkil, list mathram cheyyan",
+      "desc": "Message count or inactivity duration base cheythu inactive members identify cheyan. 'kick' ittal remove cheyyum.",
+      "inactives": "_Total inactives : {0}_",
+      "removing": "_7 seconds-il {0} inactive members remove cheyyunnu_"
+    },
+    "amute": {
+      "usage": "Upayogam: amute <hour> <min>\n- amute on | off\n- amute info\n\nText reply ittu mute message set cheyan",
+      "desc": "Group specified time-il auto mute cheyan. Optional custom message add cheyyam.",
+      "not_found": "AutoMute settings kandupidikkunilla.",
+      "already_disabled": "AutoMute already off aanu.",
+      "enabled": "AutoMute Enable cheythu.",
+      "disabled": "AutoMute Disable cheythu.",
+      "invalid_format": "> Udaharanam:\n- amute 6 0\n- amute on | off\n- amute info\n\nText reply ittu mute message set cheyan.",
+      "scheduled": "Group {0}-il mute aakum\n*message :* {1}",
+      "info": "Hour: {0}\nMinute: {1}\nTime: {2}\nMute: {3}\nMessage: {4}"
+    },
+    "aunmute": {
+      "usage": "Upayogam: aunmute <hour> <min>\n- aunmute on | off\n- aunmute info\nText reply ittu unmute message set cheyan",
+      "desc": "Group specified time-il auto unmute cheyan. Optional custom message add cheyyam.",
+      "not_found": "AutoUnMute settings kandupidikkunilla.",
+      "already_disabled": "AutoUnMute already off aanu.",
+      "enabled": "AutoUnMute Enable cheythu.",
+      "disabled": "AutoUnMute Disable cheythu.",
+      "invalid_format": "> Udaharanam:\n- aunmute 16 30\n- aunmute on | off\n- aunmute info\n\nText reply ittu unmute message set cheyan.",
+      "scheduled": "Group {0}-il unmute aakum\n*message :* {1}",
+      "info": "Hour: {0}\nMinute: {1}\nTime: {2}\nMute: {3}\nMessage: {4}"
+    },
+    "zushi": {
+      "usage": "> Udaharanam:\n- zushi ping, sticker\n- Ellaa commands set cheyyan, 'list' type cheythu copy cheytha message reply ittu (e.g., zushi copied_message).",
+      "desc": "Chat-il commands others use cheyyan allow cheyan.",
+      "already_set": "{0} already configure cheythirikkunnu.",
+      "allowed": "*allowed commands for* @{0}\n{1}",
+      "no_input": "⚠️ Command names thanne ittu\n\n📝 Udaharanam:\n  • .zushi song video sticker\n  • .zushi img trt translate\n\n💡 Multiple commands space use cheythu separate cheyyan",
+      "duplicates": "❌ Already allowed commands: {0}\n\n📋 Current allowed commands ({1} total):\n{2}\n\n💡 .yami use cheythu ellaa allowed commands kanan\n💡 .ope use cheythu commands remove cheyan",
+      "invalid": "⚠️ Valid commands kandupidikkunilla\n\nInvalid skip cheythu: {0}\n\n💡 .help use cheythu available commands kanan",
+      "error": "❌ Error: {0}",
+      "success": "✅ Vijayavumayi {0} command{1} add cheythu:\n{2}\n\n📊 Total allowed: {0} command{1} for @{3}\n\n💡 Users ippol ive commands use cheyyam"
+    },
+    "yami": {
+      "usage": "Simple aayi upayogikkuka: yami",
+      "desc": "Ippol chat-il allowed commands-inte list kanikkuka.",
+      "not_set": "Allowed commands set cheythittilla.",
+      "no_commands": "📋 Allowed commands kandupidikkunilla\n\n💡 Commands add cheyyan vendi .zushi upayogikkuka\n📝 Udaharanam: .zushi song video sticker",
+      "list": "📋 Allowed commands for @{0}:\n\n{1}\n\n📊 Total: {2} command{3}\n\n💡 Remove cheyyan: .ope <command names>\n💡 Remove all: .ope all"
+    },
+    "ope": {
+      "usage": "Udaharanam: ope ping, sticker OR ope all",
+      "desc": "Specified allowed commands delete cheyan.",
+      "not_found": "{0}-inu vendi allowed commands illa.",
+      "all_removed": "Ellaa allowed commands remove cheythu.",
+      "removed": "*removed commands for* @{0}\n{1}",
+      "no_input": "⚠️ Remove cheyyan vendi command names thanne ittu\n\n📝 Udaharanam:\n  • .ope song video\n  • .ope all (ellam remove cheyyan)\n\n💡 .yami use cheythu allowed commands kanan",
+      "not_found_list": "❌ Command{0} kandupidikkunilla: {1}{2}\n\n💡 .yami use cheythu ellaa allowed commands kanan\n📝 Udaharanam: .ope song video",
+      "error": "❌ Error: {0}",
+      "no_commands": "⚠️ Ith user/group-inu commands kandupidikkunilla\n\n💡 First .zushi use cheythu commands add cheyan",
+      "all_success": "✅ Ellaa commands remove cheythu\n\n💡 .zushi use cheythu puthiya commands add cheyan",
+      "success": "✅ {0} command{1} remove cheythu:\n{2}\n\n📊 For: @{3}\n\n💡 .yami use cheythu remaining commands kanan\n💡 .ope all use cheythu ellam remove cheyan"
+    },
+    "pdm": {
+      "usage": "Upayogam: pdm on | off",
+      "desc": "Group-il promote/demote events-inu auto notifications enable/disable cheyan.",
+      "not_found": "'on' or 'off' thanne ittu. Udaharanam: pdm on",
+      "activated": "Promote/demote alert activate cheythu.",
+      "deactivated": "Promote/demote alert deactivate cheythu."
+    },
+    "ping": {
+      "desc": "Bot-inte response time (latency) check cheyan.",
+      "ping_sent": "Ping!",
+      "pong": "Pong! Response time: {0} ms"
+    },
+    "pinterest": {
+      "usage": "Udaharanam: pinterest <Pinterest URL>",
+      "not_found": "Media kandupidikkunilla. URL check cheyan.",
+      "desc": "Pinterest videos or images download cheyan."
+    },
+    "plugin": {
+      "usage": "> Udaharanam:\n- plugin <Gist URL>\n- plugin list",
+      "desc": "External plugins install cheyan. Plugin code-ulla Gist URL thanne ittu, or installed plugins list cheyan.",
+      "invalid": "Valid plugin URL or plugin name thanne ittu.",
+      "not_installed": "Ippol installed plugins illa.",
+      "installed": "Puthiya installed plugins: {0}"
+    },
+    "remove": {
+      "usage": "> Udaharanam:\n- remove <plugin_name>\n- remove all",
+      "desc": "Plugin name specify cheythu external plugins delete cheyan or ellaa installed plugins remove cheyan.",
+      "not_found": "Plugin *{0}* kandupidikkunilla.",
+      "removed": "Plugins vijayavumayi remove cheythu."
+    },
+    "reboot": {
+      "desc": "PM2 use cheythu bot instance restart cheyan.",
+      "starting": "Restart cheyyunnu..."
+    },
+    "fullpp": {
+      "usage": "Udaharanam: fullpp (image-inu reply ittu)",
+      "desc": "Full-size profile picture set cheyan.",
+      "updated": "Profile picture update cheythu."
+    },
+    "jid": {
+      "desc": "User or chat-inte JID return cheyan."
+    },
+    "left": {
+      "desc": "Current group-il ninnu leave cheyan. Additional text ittal leave cheyyumpol ayakkum."
+    },
+    "block": {
+      "usage": "Udaharanam: block (user-inu reply ittu or mention cheyan)",
+      "desc": "Specific cheytha user block cheyan.",
+      "status": "Block cheythu"
+    },
+    "unblock": {
+      "usage": "Udaharanam: unblock (user-inu reply ittu or mention cheyan)",
+      "desc": "Specific cheytha user unblock cheyan.",
+      "status": "_Unblock cheythu_"
+    },
+    "pp": {
+      "usage": "Udaharanam: pp (image-inu reply ittu)",
+      "desc": "Reply itta image use cheythu profile picture update cheyan."
+    },
+    "whois": {
+      "number": "*Number :* {0}",
+      "name": "*Name :* {0}",
+      "about": "*About :* {0}",
+      "setAt": "*setAt :* {0}",
+      "owner": "*Owner :* {0}",
+      "members": "*Members* : {0}",
+      "description": "*desc* : {0}",
+      "created": "*Created* : {0}",
+      "usage": "Udaharanam: whois <jid or user identifier>",
+      "desc": "User or group-inte profile picture and additional information kanikkuka."
+    },
+    "gjid": {
+      "desc": "Ellaa group JIDs and group names list cheyan."
+    },
+    "qr": {
+      "usage": "Udaharanam: qr test  OR  QR image-inu reply ittu qr",
+      "desc": "Text-il ninnu QR code generate cheyan or QR image-il ninnu decode cheyan."
+    },
+    "reddit": {
+      "usage": "Udaharanam: reddit <URL>",
+      "desc": "Reddit post-il ninnu video download cheyan.",
+      "error": "URL-nu vendi video kandupidikkunilla."
+    },
+    "rmbg": {
+      "usage": "Udaharanam: rmbg (image-inu reply ittu)",
+      "desc": "Reply itta image-il ninnu background remove cheyan.",
+      "key": "Ith use cheyyan, remove.bg-il sign up cheythu, account verify cheythu, API key copy cheythu, .setvar RMBG_KEY:<your_api_key> use cheyan. SIGNUP: https://accounts.kaleido.ai/users/sign_up | API KEY: https://www.remove.bg/dashboard#api-key",
+      "error": "API key or image illa. API key set cheythu image-inu reply ittu."
+    },
+    "setschedule": {
+      "usage": "> *Udaharanam :*\n- setschedule jid,min-hour-day-month (24 hour format, day and month optional)\n- setschedule 91987654321@s.whatsapp.net, 9-9-13-8\n- setschedule 91987654321@s.whatsapp.net, 0-10 (daily 10 am message ayakkuka)\n- setschedule 91987654321@s.whatsapp.net, 0-10, once (10 am message one time ayakkuka)",
+      "desc": "Specified time-il auto message ayakkuka. Target JID(s) and time thanne ittu. Schedule cheyyan vendi message-inu reply ittu.",
+      "invalid": "Schedule format or time thettaanu.",
+      "no_reply": "Schedule cheyyan vendi message-inu reply ittu.",
+      "scheduled": "_Vijayavumayi *{0}*-il ayakkam_ @{1}."
+    },
+    "getschedule": {
+      "desc": "Specified chat-inu scheduled messages edukkanam.",
+      "not_found": "Scheduled messages illa.",
+      "time": "Time : {0}"
+    },
+    "delschedule": {
+      "usage": "> Udaharanam:\n- delschedule 9198765431@s.whatsapp.net, 8-8-10-10\n- delschedule 9198765431@s.whatsapp.net\n- delschedule all",
+      "desc": "Target JID and time specify cheythu scheduled message delete cheyan or ellaa scheduled messages remove cheyan.",
+      "invalid": "Format thettaanu.",
+      "not_found": "Schedule kandupidikkunilla.",
+      "deleted": "_Schedule delete cheythu._"
+    },
+    "setstatus": {
+      "usage": "Udaharanam: setstatus jid,jid,jid,... OR setstatus contact",
+      "desc": "Specific contacts or imported contacts-inu WhatsApp status set cheyan. Status set cheyyan vendi message-inu reply ittu.",
+      "reply_required": "Status set cheyyan vendi message-inu reply ittu.",
+      "sent": "_Status {0} contacts-inu ayachirikkunnu._"
+    },
+    "scstatus": {
+      "usage": "Udaharanam:\n- scstatus jid,jid,jid,...|min-hour-day-month (day and month optional)\n- scstatus contact|min-hour-day-month\n- scstatus delete all|min-hour-day-month\n- scstatus list",
+      "desc": "Specified time-il WhatsApp status schedule cheyan. 'contact' use cheythu imported contacts-inu or specific JIDs thanne ittu.",
+      "reply_required": "Status schedule cheyyan vendi message-inu reply ittu.",
+      "invalid": "Format thettaanu.",
+      "scheduled": "_Vijayavumayi {0}-il ayakkam_",
+      "list": "Scheduled status list:",
+      "deleted": "Schedule delete cheythu."
+    },
+    "antispam": {
+      "desc": "Configurable levels-ulla antispam protection manage cheyan",
+      "usage": "Upayogam: antispam <on/off/low/medium/high/warn/delete/kick/info>",
+      "disabled_status": "📊 *Antispam Status*\n\n🔴 Disabled\n\nProtection enable cheyyan vendi `antispam on` upayogikkuka",
+      "info_status": "📊 *Antispam Status*\n\n{status}\nLevel: {level}\nAction: {action}",
+      "deactivated": "⚠️ *Antispam Protection Disabled*\n\nSpam detection ippol OFF aanu",
+      "activated": "✅ *Antispam Protection Enabled*\n\nLevel: {level} ({description})\nAction: {action}",
+      "level_set": "✅ *Level Maatti*\n\nPuthiya level: {level}",
+      "action_set": "✅ *Action Maatti*\n\nSpammers: {action_desc} aakum",
+      "invalid_level": "❌ Level thettaanu. Upayogam: low, medium, high",
+      "help": "📖 *Antispam Help*\n\n*Commands:*\n• `antispam on` - Enable (default: medium)\n• `antispam off` - Disable\n• `antispam <low/medium/high>` - Sensitivity maattuka\n• `antispam <warn/delete/kick>` - Action maattuka\n• `antispam info` - Ippolulla settings kanan\n\n*Levels:*\n• Low - Relaxed (active groups)\n• Medium - Balanced (suggested)\n• High - Strict (problem groups)",
+      "spam_warning": "⚠️ @{mention} Spamming nirthuka!",
+      "action_warn": "warned (kicked alla)",
+      "action_delete": "messages delete cheythu mathram",
+      "action_kick": "group-il ninnu kicked"
+    },
+    "sticker": {
+      "desc": "Image or video sticker aakkuka. Sticker generate cheyyan vendi image or video message-inu reply ittu.",
+      "reply_required": "Image or video message-inu reply ittu."
+    },
+    "circle": {
+      "desc": "Image circular sticker aakkuka.",
+      "reply_required": "Image-inu reply ittu."
+    },
+    "take": {
+      "usage": "Udaharanam: take <title,artists,url> (sticker or audio-inu reply ittu). Audio-yanuvenkil title venam; artists and URL optional.",
+      "desc": "Sticker pack metadata update cheyan. Sticker-inu reply ittenkil pack metadata update cheyan. Audio-inu reply ittenkil metadata (title, artists, URL) add cheyan.",
+      "reply_required": "Sticker or audio message-inu reply ittu.",
+      "additional_info": "Audio metadata-yil artists or URL optional aanu."
+    },
+    "mp4": {
+      "desc": "Animated sticker (WebP) MP4 video aakkuka.",
+      "reply_required": "Animated sticker-inu reply ittu."
+    },
+    "story": {
+      "usage": "Udaharanam: story <username> (or username-ulla message-inu reply ittu)",
+      "desc": "Instagram stories download cheyan. Multiple stories available enkil list thanne ittu select cheyyan.",
+      "not_found": "Username-inu vendi stories illa.",
+      "list": "Total {0} stories available. Download cheyyan oru select cheyan.\n"
+    },
+    "tag": {
+      "usage": "Udaharanam: tag all | tag admin | tag notadmin | tag <custom message> (or 'tag' ittu message-inu reply ittu)",
+      "desc": "Choice base cheythu group-il members mention cheyan."
+    },
+    "tictactoe": {
+      "usage": "Udaharanam: tictactoe <opponent_jid> OR tictactoe restart <opponent_jid> OR tictactoe end",
+      "desc": "TicTacToe game kalikkuka.",
+      "choose_opponent": "Opponent select cheyyan vendi message-inu reply ittu or user mention cheyan. Thanne-odu kalikkkan pattilla.",
+      "game_ended": "Game theernnu.",
+      "game_restarted": "Opponent maatti game veendum thudangi.",
+      "invalid_input": "Input thettaanu.",
+      "players": "Players",
+      "already_occupied": "_Already Occupied_",
+      "current_player": "currentPlayer",
+      "game_finish": "Game Finish 🏁",
+      "winner": "Winner"
+    },
+    "tiktok": {
+      "usage": "Upayogam: tiktok <TikTok URL> (or URL-ulla message-inu reply ittu)",
+      "desc": "TikTok video download cheyan.",
+      "not_found": "Video kandupidikkunilla. URL check cheyan."
+    },
+    "tog": {
+      "usage": "Udaharanam: tog ping off",
+      "desc": "Bot command enable/disable cheyan.",
+      "invalid": "Input thettaanu. Upayogam: tog <command> on|off (e.g., tog ping off)",
+      "self_reference": "Enne thanne kill cheyyanamo?",
+      "enabled": "{0} Enable cheythu.",
+      "disabled": "{0} Disable cheythu."
+    },
+    "trt": {
+      "usage": "Udaharanam: trt ml hi OR trt ml (text message-inu reply ittu)",
+      "desc": "Google Translate use cheythu text translate cheyan."
+    },
+    "twitter": {
+      "usage": "Udaharanam: twitter <Twitter URL> (or URL-ulla message-inu reply ittu)",
+      "desc": "Twitter video download cheyan. Multiple quality options available enkil select cheyyan prompt thanne ittu.",
+      "not_found": "URL-nu vendi video illa.",
+      "choose_quality": "> Video quality select cheyan\n"
+    },
+    "upload": {
+      "usage": "Udaharanam: upload <URL> (or URL-ulla message-inu reply ittu)",
+      "desc": "URL-il ninnu media download cheyan."
+    },
+    "url": {
+      "usage": "Udaharanam: url OR url imgur (image or video-inu reply ittu)",
+      "desc": "Image or video URL aakkuka. Optional aayi parameter (e.g., 'imgur') specify cheythu specific service-il ninnu URL edukkanam."
+    },
+    "getvar": {
+      "usage": "Udaharanam: getvar sudo",
+      "desc": "Variable-inte value kanikkuka.",
+      "not_found": "{0} vars-il kandupidikkunilla."
+    },
+    "delvar": {
+      "usage": "Udaharanam: delvar sudo",
+      "desc": "Variable key specify cheythu delete cheyan.",
+      "not_found": "{0} vars-il kandupidikkunilla.",
+      "deleted": "{0} delete cheythu."
+    },
+    "setvar": {
+      "usage": "Udaharanam: setvar key = value",
+      "desc": "Specific key and value-ulla variable set cheyan. Key and value separate cheyyan vendi '=' upayogikkuka.",
+      "success": "Puthiya var {0} {1} aayi add cheythu."
+    },
+    "allvar": {
+      "desc": "Ellaa stored variables sorted order-il kanikkuka."
+    },
+    "vote": {
+      "usage": "> Udaharanam :\nvote q|What your favorite color?\no|😀|Blue\no|😊|Red",
+      "desc": "WhatsApp group-il vote thudanguka.",
+      "notes": "Recipients specify cheythittilla enkil vote message current group-lekku ayakkum.",
+      "no_vote": "Votes illa!",
+      "total_vote": "total votes : *{0}*",
+      "delete_vote": "Puthiya vote set cheyyan current vote delete cheyan.",
+      "option_required": "randu or more options venam",
+      "question_required": "question venam",
+      "vote": "React or reply option ittu vote cheyan.",
+      "vote_deleted": "_Vote delete cheythu._",
+      "voted": "@{0} {1}-nu vendi vote cheythu\n\n${2}"
+    },
+    "warn": {
+      "usage": "Udaharanam: warn @user OR warn reset @user. User-inte message-inu reply ittu 'warn' or 'warn reset' type cheyyam.",
+      "desc": "Group chat-il user-inu warn kodukkuka.",
+      "reset_usage": "Udaharanam: warn reset @user (or user-inte message-inu reply ittu 'warn reset' type cheyan).",
+      "cannot_remove_admin": "Admin remove cheyyan pattilla."
+    },
+    "wcg": {
+      "usage": "Udaharanam:\n- wcg start (word chain game force start cheyan)\n- wcg end (current game stop cheyan)\n- wcg <word> (word chain continue cheyan)",
+      "desc": "Word Chain Game: Word ittu chain continue cheyan."
+    },
+    "wrg": {
+      "usage": "Udaharanam:\n- wrg start (random word game force start cheyan)\n- wrg end (current game stop cheyan)\n- wrg <word> (random prompt-inu word submit cheyan)",
+      "desc": "Random Word Game: Random prompt-inu word submit cheyan."
+    },
+    "yts": {
+      "usage": "Udaharanam: yts baymax",
+      "desc": "YouTube-il ninnu videos search cheyan."
+    },
+    "song": {
+      "usage": "Udaharanam: song indila love story OR song <YouTube URL> (message-inu reply cheyyam)",
+      "desc": "YouTube-il ninnu song download cheyan.",
+      "not_found": "Query or URL-nu vendi song illa."
+    },
+    "video": {
+      "usage": "Udaharanam: video 720p <YouTube URL> OR video <YouTube URL>",
+      "desc": "YouTube video download cheyan. Optional aayi quality (e.g., 720p, 1080p) specify cheyyam. Default 480p aanu.",
+      "not_found": "Query or URL-nu vendi video illa."
+    },
+    "update": {
+      "usage": "Udaharanam: update",
+      "desc": "New updates check cheyan. Available updates kanikkum or bot up-to-date aanu confirm cheyyum.",
+      "up_to_date": "Bot already up-to-date aanu.",
+      "available": "{0} new updates available:\n{1}"
+    },
+    "update_now": {
+      "usage": "Udaharanam: update now",
+      "desc": "Bot latest version-il update cheyan.",
+      "up_to_date": "Bot already up-to-date aanu. Updates illa.",
+      "updating": "Bot update cheyyunnu...",
+      "updated": "Bot vijayavumayi update cheythu!"
+    },
+    "antigm": {
+      "usage": "> Upayogam:\n- antigm on | off — Anti group mention enable/disable cheyan\n- antigm delete | warn | kick — Group mention-il action set cheyan\n- antigm ignore jid,jid,... — Specific groups-il ninnu anti group mention ignore cheyan",
+      "action": "Action update cheythu: group mentions ippol *{0}* aayi.",
+      "filter": "Anti group mention-inu ignore JIDs update cheythu.",
+      "enabled": "Anti group mention enable cheythu.",
+      "disabled": "Anti group mention disable cheythu."
+    }
+  }
+}
