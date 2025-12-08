@@ -2,7 +2,7 @@
   "extra": {
     "init_session": "[{0}] Puthiya session aarambhikkunnu",
     "load_session": "[{0}] Session status parisodhikkunnu",
-    "invalid_session": "[{0}] {1} THEETAYA SESSION ID ANN ITTEKANA, VEENDUM SCAN CHEYUKA!!!",
+    "invalid_session": "[{0}] {1} THEETAYA SESSION ID ANN ITTEKUNATH, VEENDUM SCAN CHEYUKA!!!",
     "success_session": "[{0}] Session successfully validated.",
     "connecting": "[{0}] Connecting...",
     "connected": "[{0}] Connected {1}",
